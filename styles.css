@@ -1,5 +1,228 @@
-.blog-post {
-    border: 5px solid black;
-    margin-bottom: 3em;
+:root {
+  --plastic: rgb(242, 245, 170);
+  --ubuntu: rgb(48, 10, 36);
 }
 
+@keyframes rainbow {
+  0% { color: transparent; }
+  7% { color: #ff0000; }
+  12.5% { color: #ff7f00; }
+  25% { color: #ffff00; }
+  37.5% { color: #00ff00; }
+  50% { color: #007fff; }
+  62.5% { color: #0000ff; }
+  75% { color: #7fff00; }
+  87.5% { color: #ff00ff; }
+  100% { color: #ff0000; }
+}
+
+* {
+  font-family: 'Courier Prime', monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2016/01/25/18/21/wood-1161206_1280.jpg);
+  background-attachment: fixed;
+  height: 100%
+}
+
+
+
+.topbar {
+  color: limegreen;
+  background-color: black;
+  border: 12px solid var(--plastic);
+  height: 16vh;
+  position: fixed;
+  top: 0;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-width: 400px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .5);
+  z-index: 100;
+}
+
+.topbar-top {
+  display: flex;
+  flex-grow: 1;
+  text-transform: uppercase;
+}
+.topbar-bottom {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.power-button {
+  border: 1px solid gray;
+  width: 10px;
+  height: 12px;
+  position: absolute;
+  bottom: -12px;
+  right: 25px;
+}
+.power-light {
+  height: 3px;
+  width: 3px;
+  background-color: lime;
+  position: absolute;
+  right: 2px;
+  top: 4px
+}
+
+.stand {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.topbar-stand {
+  background-color: var(--plastic);
+  height: 10vh;
+  width: 8vw;
+  position: absolute;
+  top: 15vh;
+  
+}
+.topbar-base {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  bottom: 73vh;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid var(--plastic);
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-radius: 20%;
+}
+ 
+ #welcome-section, #contact{
+   margin: 30vh 3vw 20vh;
+   border: 2.5vw solid var(--plastic);
+   min-width: 570px;
+ }
+ .screen {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--ubuntu);
+   border-radius: 8px;
+   margin: -8px;
+   padding: 15px 0 5px 20px;
+ }
+ .screen h1 {
+   color: lime;
+   font-size: 4vh;
+ }
+ .screen span {
+   color: white;
+   font-size: 3.6vh;
+ }
+ .screen p {
+   color: white;
+   text-align: center;
+   padding-bottom: 8vh;
+ }
+ .ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    color: rgb(0, 0, 255);
+    display: flex;
+    align-self: center;
+    padding: 8vh 0;
+    font-size: 3vh;
+}
+
+.project-container {
+  padding: 2vh 0;
+  margin-top: -10vh;
+}
+.project-container h2 {
+  padding: 8vh 0;
+  text-align: center;
+  color: limegreen;
+  font-size: 8vh;
+}
+.multi-pannel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+}
+.project {
+  border: 2vh solid var(--plastic);
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  min-width: 250px;
+  
+}
+.project h3 {
+  background-color: var(--ubuntu);
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  padding: 1.5vh 0;
+  height: 100%;
+}
+
+.project h3 span {
+  color: transparent;
+}
+h3:hover span {
+  cursor: pointer;
+  animation: rainbow 8s infinite;
+}
+.see-my {
+  padding: 2vh 3vw;
+  margin: 10vh auto -6vh;
+}
+.project-container button img {
+  width: 3vh;
+}
+.project-container button {
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
+  align-items: center;
+}
+
+a {
+  color: limegreen;
+  font-size: 3.5vh;
+  text-decoration: none;
+}
+a:hover {
+  color: lime;
+  transition: color 1s;
+}
+.social-block {
+  padding: 4vh 2vh;
+}
+.screen.two {
+  padding: 1vh auto;
+  text-align: center;
+}
+.screen.two h1 {
+  padding: 6vh;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+
+}
+@media (min-width: 600px) {
+  footer {
+    height: 6vh;
+  }
+}
