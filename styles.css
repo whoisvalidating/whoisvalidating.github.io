@@ -35,7 +35,7 @@ body {
   color: limegreen;
   background-color: black;
   border: 12px solid var(--plastic);
-  height: 16vh;
+  height: 14vh;
   position: fixed;
   top: 0;
   width:100%;
@@ -87,14 +87,14 @@ body {
   height: 10vh;
   width: 8vw;
   position: absolute;
-  top: 15vh;
+  top: 12vh;
   
 }
 .topbar-base {
   width: 200px;
   height: 40px;
   position: absolute;
-  bottom: 73vh;
+  top: 13vh;
   border-top: 30px solid transparent;
   border-bottom: 30px solid var(--plastic);
   border-left: 90px solid transparent;
@@ -105,7 +105,7 @@ body {
  #welcome-section, #contact{
    margin: 30vh 3vw 20vh;
    border: 2.5vw solid var(--plastic);
-   min-width: 570px;
+   /*min-width: 500px;*/
  }
  .screen {
    display: flex;
@@ -135,7 +135,7 @@ body {
     display: flex;
     align-self: center;
     padding: 8vh 0;
-    font-size: 3vh;
+    font-size: 2.7vw;
 }
 
 .project-container {
