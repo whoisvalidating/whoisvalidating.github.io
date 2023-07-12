@@ -26,16 +26,17 @@
 body {
   background-image: url(https://cdn.pixabay.com/photo/2016/01/25/18/21/wood-1161206_1280.jpg);
   background-attachment: fixed;
-  height: 100%
 }
 
 
 
 .topbar {
   color: limegreen;
+  padding: 4px 0;
   background-color: black;
   border: 12px solid var(--plastic);
-  height: 14vh;
+  height: 13vh;
+  min-height: 55px;
   position: fixed;
   top: 0;
   width:100%;
@@ -43,69 +44,60 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  min-width: 400px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .5);
   z-index: 100;
+  @media (max-height: 560px) {
+    flex-direction: row;
+  };
 }
 
 .topbar-top {
   display: flex;
-  flex-grow: 1;
   text-transform: uppercase;
+  font-size: 2.3vh;
+  @media (max-height: 560px) {
+    padding-left: 10px;
+  };
 }
 .topbar-bottom {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
+.topbar-bottom a {
+  color: limegreen;
+  font-size: 2.4vh;
+  text-decoration: none;
+}
 .power-button {
   border: 1px solid gray;
-  width: 10px;
+  width: 16px;
   height: 12px;
   position: absolute;
   bottom: -12px;
   right: 25px;
+  box-shadow: 0px 0px 1px .5px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 1px .5px rgba(0, 0, 0, 0.3);
+
 }
 .power-light {
   height: 3px;
-  width: 3px;
+  width: 5px;
   background-color: lime;
   position: absolute;
-  right: 2px;
-  top: 4px
-}
-
-.stand {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-}
-.topbar-stand {
-  background-color: var(--plastic);
-  height: 10vh;
-  width: 8vw;
-  position: absolute;
-  top: 12vh;
-  
-}
-.topbar-base {
-  width: 200px;
-  height: 40px;
-  position: absolute;
-  top: 13vh;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid var(--plastic);
-  border-left: 90px solid transparent;
-  border-right: 90px solid transparent;
-  border-radius: 20%;
+  right: 4px;
+  top: 4px;
+  box-shadow: 0px 0px 1px .5px rgba(0, 0, 0, 0.4);
 }
  
+
+
  #welcome-section, #contact{
-   margin: 30vh 3vw 20vh;
    border: 2.5vw solid var(--plastic);
    /*min-width: 500px;*/
+ }
+ #welcome-section {
+   margin: 30vh 7vw 20vh;
  }
  .screen {
    display: flex;
@@ -117,7 +109,7 @@ body {
  }
  .screen h1 {
    color: lime;
-   font-size: 4vh;
+   font-size: 2vw;
  }
  .screen span {
    color: white;
@@ -135,8 +127,10 @@ body {
     display: flex;
     align-self: center;
     padding: 8vh 0;
-    font-size: 2.7vw;
+    font-size: 1vw;
 }
+
+
 
 .project-container {
   padding: 2vh 0;
@@ -160,6 +154,7 @@ body {
   flex-direction: column;
   width: 25vw;
   min-width: 250px;
+  text-align: center;
   
 }
 .project h3 {
@@ -191,8 +186,10 @@ h3:hover span {
   gap: 2vw;
   align-items: center;
 }
-
-a {
+#contact {
+  margin: 30vh 3vw 20vh;
+}
+.project a {
   color: limegreen;
   font-size: 3.5vh;
   text-decoration: none;
@@ -211,9 +208,15 @@ a:hover {
 .screen.two h1 {
   padding: 6vh;
 }
+.social-block a {
+  color: limegreen;
+  font-size: 3.5vh;
+  text-decoration: none;
+}
 
 footer {
   display: flex;
+  flex-direction: column;
   background-color: black;
   color: white;
   align-items: center;
@@ -221,8 +224,7 @@ footer {
   height: 8vh;
 
 }
-@media (min-width: 600px) {
-  footer {
-    height: 6vh;
-  }
+
+@media screen and (max-width: 375px) {
+  /* CSS rules */
 }
